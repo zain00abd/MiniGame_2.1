@@ -6,18 +6,15 @@ using UnityEngine;
 public class movePlayer : MonoBehaviour
 {
     CharacterController Controller;
-    float speed = 5;
-    float gravity = 10;
+    float speed = 10;
+    float gravity = 18;
     float verticalvelocity = 0;
-    public float jamp = 10;
-    Animator anim;
+    public float jamp = 6;
 
     // Start is called before the first frame update
     void Start()
     {
         Controller = GetComponent<CharacterController>();
-        anim = GetComponentInChildren<Animator>();
-
     }
 
     // Update is called once per frame
@@ -46,7 +43,7 @@ public class movePlayer : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            anim.SetTrigger("Atteg");
+            
         }
 
         if (movediretion.magnitude > 0.1)
