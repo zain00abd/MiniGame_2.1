@@ -41,14 +41,12 @@ public class movePlayer : MonoBehaviour
         bool isSprint = Input.GetKey(KeyCode.LeftShift);
         float Sprint = isSprint ? 1.7f : 1;
 
-        if (Input.GetMouseButtonDown(0))
+
+        if (Input.GetKey(KeyCode.W)) 
         {
-            
+            verticalvelocity = jamp;
         }
 
-        if (movediretion.magnitude > 0.1)
-        {
-        }
 
         movediretion = new Vector3(movediretion.x * speed * Sprint, verticalvelocity, movediretion.z * speed * Sprint);
 
